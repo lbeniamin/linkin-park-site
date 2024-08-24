@@ -6,6 +6,7 @@
 
 // Plugins
 import { registerPlugins } from '@/plugins';
+import mitt from 'mitt';
 
 // Components
 import App from './App.vue';
@@ -54,8 +55,11 @@ const i18n = createI18n({
     },
   },
 });
+const emitter = mitt();
 
 const app = createApp(App);
+
+app.config.globalProperties.emitter = emitter;
 
 app.use(i18n);
 registerPlugins(app);

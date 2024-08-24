@@ -25,7 +25,7 @@ export default toNative(MainLayout)
 <style lang="scss">
   .mainLayout {
     min-height: calc(100vh - 320px);
-    column-gap: 16px;
+    gap: 16px;
     &_content, &_sidebar {
       background-color: rgba(45, 45, 45, 0.5);
       border-radius: 6px;
@@ -33,9 +33,18 @@ export default toNative(MainLayout)
     }
     &_content {
       width: 75%;
+      @media (max-width: 1199px) {
+        width: 100%;
+      }
     }
     &_sidebar {
       width: 25%;
+      @media (max-width: 1199px) {
+        width: 100%;
+      }
+    }
+    @media (max-width: 1199px) {
+      flex-direction: column;
     }
   }
 </style>

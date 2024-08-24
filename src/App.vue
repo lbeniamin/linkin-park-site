@@ -3,7 +3,7 @@
     <v-app-bar flat absolute :height="270">
       <nav-bar />
     </v-app-bar>
-    <v-main :max-width="1200" width="100%" class="mx-auto">
+    <v-main :max-width="1280" width="100%" class="mx-auto px-5">
       <router-view />
     </v-main>
     <v-footer app height="50">
@@ -14,6 +14,9 @@
 
 <script lang="ts" setup>
   import '@/styles/main.scss';
+  import { useDisplay } from 'vuetify';
+
+  const { mobile } = useDisplay();
 </script>
 
 <style lang="scss">

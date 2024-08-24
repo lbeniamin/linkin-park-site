@@ -1,5 +1,5 @@
 <template>
-  <div class="siteFooter d-flex align-center justify-space-between mx-auto">
+  <div class="siteFooter d-flex align-center justify-space-between mx-auto px-5">
     <div class="d-flex align-center">
       <span class="mr-4">&#169; 2012 - 2024 Linkin Park - Poland</span>
     </div>
@@ -37,7 +37,7 @@ export default toNative(SiteFooter)
 <style lang="scss">
 
 .siteFooter {
-  max-width: 1200px;
+  max-width: 1280px;
   width: 100%;
   &_socials {
     column-gap: 16px;
